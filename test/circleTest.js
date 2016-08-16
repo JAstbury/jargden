@@ -1,12 +1,10 @@
 var assert = require("./assert");
-var circle = require('../modules/circle')
+var Circle = require('../modules/circle')
 
-function testCircleRadiusDefaultsTo10() {
+  function testCircleRadiusDefaultsTo10() {
   var circle = new Circle();
-
-  if (circle.radius() !== 10) {
-    throw new Error("Circle size is not 10");
-  }
+  assert.isTrue(circle.radius === 10);
 };
+
 
 testCircleRadiusDefaultsTo10();

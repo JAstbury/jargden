@@ -1,19 +1,40 @@
-// var note = require("")
-var testy = require("./testy").isTrue;
+// var Note = require("../note");
+// var Testy = require("./testy").Testy;
+// var NoteList = require('../noteList').noteList;
 
-function testThatNoteDisplaysStoredText() {
+// function testThatNoteDisplaysStoredText() {
+//   var note = new Note("Georgia");
+//   var testy = new Testy();
+//
+//   testy.isTrue(note.display === "Georgia");
+// }
+//
+// function testThatNoteAbbreviates() {
+//   var note = new Note("Georgia is a member of the excellent team jargden.");
+//   var testy = new Testy();
+//
+//   testy.isTrue(note.abbreviate === "Georgia is a member o...");
+// }
+
+function testItMakesANewNote() {
+  var note = new Note("Georgia").Note;
+  var testy = new Testy();
+
+  testy.isTrue(note.message === "Georgia");
+}
+
+function testThatcreateMessageClickWorks() {
   var note = new Note("Georgia");
   var testy = new Testy();
-
-  testy.isTrue(note.display === "Georgia");
+  var noteList = new NoteList()
+  noteList.add(note)
+  console.log('*******')
+  console.log(noteList.notes)
+  testy.isTrue(noteList.notes === ["Georgia"]);
 }
 
-function testThatNoteAbbreviates() {
-  var note = new Note("Georgia is a member of the excellent team jargden.");
-  var testy = new Testy();
 
-  testy.isTrue(note.abbreviate === "Georgia is a member o...");
-}
-
-testThatNoteDisplaysStoredText();
-testThatNoteAbbreviates();
+testThatcreateMessageClickWorks()
+testItMakesANewNote()
+// testThatNoteDisplaysStoredText();
+// testThatNoteAbbreviates();
