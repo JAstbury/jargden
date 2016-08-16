@@ -1,5 +1,5 @@
 function Circle() {
-  radius = 10
+  this.radius = 10
 }
 
-exports.circle = Circle
+module.exports = Circle

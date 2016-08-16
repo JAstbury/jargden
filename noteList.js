@@ -1,8 +1,9 @@
-function noteList() {
+(function(exports) {
+function NoteList() {
   this.notes = [];
 }
 
-noteList.prototype.add = function(note){
+NoteList.prototype.add = function(note){
 
   if(localStorage.getItem("notes") === null){
     this.notes.push(note);
@@ -13,3 +14,6 @@ noteList.prototype.add = function(note){
     localStorage.setItem("notes", JSON.stringify(this.notes));
   }
   }
+
+  exports.NoteList = NoteList;
+})(this);

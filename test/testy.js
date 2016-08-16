@@ -5,10 +5,9 @@
       if (!assertionToCheck) {
         throw new Error("Test failed:" + assertionToCheck + " is not truthy");
       } else {
-        console.log("Test passed");
+        console.log("WOOO WE ARE AWESOME");
       }
-    }
-  };
+    };
 
   exports.Testy = Testy;
 })(this);
