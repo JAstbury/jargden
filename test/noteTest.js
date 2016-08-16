@@ -1,3 +1,4 @@
+// var note = require("")
 var testy = require("./testy").isTrue;
 
 function testThatNoteDisplaysStoredText() {
@@ -11,7 +12,7 @@ function testThatNoteAbbreviates() {
   var note = new Note("Georgia is a member of the excellent team jargden.");
   var testy = new Testy();
 
-  esty.isTrue(note.abbreviate === "Georgia is a member o...");
+  testy.isTrue(note.abbreviate === "Georgia is a member o...");
 }
 
 testThatNoteDisplaysStoredText();
