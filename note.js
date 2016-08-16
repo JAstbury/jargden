@@ -15,6 +15,7 @@ notesList.add(message);
  // }
 
 }
+module.exports = Note
 
 
 

@@ -1,5 +1,5 @@
-// var note = require("")
-var testy = require("./testy").isTrue;
+var Note = require("../note")
+var Testy = require("./testy").Testy;
 
 function testThatNoteDisplaysStoredText() {
   var note = new Note("Georgia");
