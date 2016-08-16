@@ -26,15 +26,14 @@ function testItMakesANewNote() {
 function testThatcreateMessageClickWorks() {
   var note = new Note("Georgia");
   var testy = new Testy();
-  var noteList = new NoteList()
-  noteList.add(note)
-  console.log('*******')
-  console.log(noteList.notes)
-  testy.isTrue(noteList.notes === ["Georgia"]);
+  var noteList = new NoteList();
+  noteList.add(note);
+  var list = noteList.notes;
+  testy.isTrue(list[list.length - 1].message === "Georgia");
 }
 
 
 testThatcreateMessageClickWorks()
-testItMakesANewNote()
-// testThatNoteDisplaysStoredText();
+// testItMakesANewNote()
+// // testThatNoteDisplaysStoredText();
 // testThatNoteAbbreviates();
