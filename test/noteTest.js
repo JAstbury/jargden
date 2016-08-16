@@ -1,4 +1,4 @@
-// var note = require("")
+var Note = require("../note");
 var testy = require("./testy").isTrue;
 
 function testThatNoteDisplaysStoredText() {
