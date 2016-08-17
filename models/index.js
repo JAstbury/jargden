@@ -1,8 +1,5 @@
 var notes = new NoteList();
 
-
-
-
 function createMessageClick(){
   var input = document.forms.Form.message.value;
   var message = new Note(input);
