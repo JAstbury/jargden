@@ -7,6 +7,9 @@ function createMessageClick(){
   var input = document.forms.Form.message.value;
   var message = new Note(input);
   notes.add(message);
+  var stringToObject = JSON.parse(localStorage.getItem("notes"));
+  var messageList = document.getElementById("messages").innerHTML;
+         document.getElementById("messages").innerHTML = messageList + "<br>" + "<a href=#" + (stringToObject.length -1) +">" + stringToObject[stringToObject.length - 1]['message'].substring(0,20) + "...</a>";
 }
 
 var stringToObject = JSON.parse(localStorage.getItem("notes"));
