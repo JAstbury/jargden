@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,7 +15,7 @@
 
     <form id="Form">
       <input id="message"></input>
-      <input id="createMessage" type="submit" onclick="createMessageClick()">Create a note</input>
+      <button id="createMessage" type="button" onclick="createMessageClick()">Post</button>
     </form>
 
   </div>
@@ -29,14 +30,14 @@
     <h2></h2>
   </div>
 
-  <script src="models/noteList.js"></script>
-  <script src="models/note.js"></script>
-  <script src="models/index.js"></script>
-  <script src="test/testy.js"></script>
-  <script src="test/testydescribe.js"></script>
 
+      <script src="models/storage.js"></script>
+      <script src="models/noteList.js"></script>
+      <script src="models/note.js"></script>
+      <script src="models/index.js"></script>
+      <script src="test/testy.js"></script>
+      <script src="test/testydescribe.js"></script>
 
-  <script src="test/features.js"></script>
-
+      <script src="test/features.js"></script>
 </body>
 </html>
