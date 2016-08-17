@@ -17,3 +17,5 @@ describe('New message', function (){
     testy.isTrue('create message click works', list[list.length - 1].message === "Georgia");
   })
 })
+
+localStorage.clear()
