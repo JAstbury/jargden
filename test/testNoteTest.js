@@ -18,4 +18,4 @@ describe('New message', function (){
   })
 })
 
-localStorage.clear()
+localStorage.clear();

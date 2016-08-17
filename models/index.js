@@ -4,20 +4,19 @@ function createMessageClick(){
   var input = document.forms.Form.message.value;
   var message = new Note(input);
   notes.add(message);
-  var stringToObject = JSON.parse(localStorage.getItem("notes"));
+  var notesArray = getItem("notes");
+  console.log(notesArray)
   var messageList = document.getElementById("messages").innerHTML;
-         document.getElementById("messages").innerHTML = messageList + "<br>" + "<a href=#" + (stringToObject.length -1) +">" + stringToObject[stringToObject.length - 1]['message'].substring(0,20) + "...</a>";
+         document.getElementById("messages").innerHTML = messageList + "<br>" + "<a href=#" + (notesArray.length -1) +">" + notesArray[notesArray.length - 1]['message'].substring(0,20) + "...</a>";
 }
 
-var stringToObject = JSON.parse(localStorage.getItem("notes"));
+var notesArray = getItem("notes");
 
-if(localStorage.getItem("notes") !== null) {
+if(getItem("notes") !== null) {
   window.onload = function() {
-
-     for(var i = 0; i < stringToObject.length;i++) {
-
+     for(var i = 0; i < notesArray.length;i++) {
       var messageList = document.getElementById("messages").innerHTML;
-         document.getElementById("messages").innerHTML = messageList + "<br>" + "<a href=#" + i +">" + stringToObject[i]['message'].substring(0,20) + "...</a>";
+         document.getElementById("messages").innerHTML = messageList + "<br>" + "<a href=#" + i +">" + notesArray[i]['message'].substring(0,20) + "...</a>";
     }
 
    };
