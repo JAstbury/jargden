@@ -1,6 +1,4 @@
 
-var testy = new Testy()
-
   function describe(title, callback) {
     console.log(title);
     callback();
