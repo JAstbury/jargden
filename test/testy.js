@@ -1,11 +1,13 @@
 (function(exports) {  //self-executing anonymous function
   function Testy(){}
 
-  Testy.prototype.isTrue = function(assertionToCheck) {
+  Testy.prototype.isTrue = function(testTitle, assertionToCheck) {
       if (!assertionToCheck) {
-        throw new Error("Test failed:" + assertionToCheck + " is not truthy");
+        console.log(testTitle + "%c is not quite there yet",'color: red');
+        return false
       } else {
-        console.log("WOOO WE ARE AWESOME");
+        console.log(testTitle + "%c WOOO WE ARE AWESOME",'color: #bada55');
+        return true
       }
     };
 
