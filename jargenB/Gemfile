@@ -1,0 +1,16 @@
+
+source "https://rubygems.org"
+
+ruby '2.3.1'
+
+gem 'data_mapper'
+gem 'dm-postgres-adapter'
+gem 'sinatra'
+# gem 'sinatra-partial'
+gem 'rake'
+gem 'sinatra-flash'
+# gem "sinatra-cross_origin", "~> 0.3.1"
+gem 'rspec'
+
+gem 'capybara'
+gem 'database_cleaner'
