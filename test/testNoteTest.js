@@ -1,4 +1,3 @@
-
 var testy = new Testy();
 
 describe('New note', function (){
@@ -15,7 +14,7 @@ describe('New message', function (){
     noteList.add(note);
     var list = noteList.notes;
     testy.isTrue('create message click works', list[list.length - 1].message === "Georgia");
-  })
-})
+  });
+});
 
 localStorage.clear();
