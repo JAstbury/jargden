@@ -1,4 +1,3 @@
-ENV['RACK_ENV'] = 'development'
 
 require 'sinatra/base'
 require './data_mapper_setup'
@@ -6,7 +5,7 @@ require './data_mapper_setup'
 class MyApp < Sinatra::Base
 
   get '/' do
-    note = Note.create( content: params[:content] )
+    note = Note.create( content: params[:message] )
   end
 
   post '/' do
