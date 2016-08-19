@@ -1,15 +1,28 @@
 
 require 'sinatra/base'
 require './data_mapper_setup'
+require 'json'
 
 class MyApp < Sinatra::Base
 
+before do
+  headers 'Access-Control-Allow-Origin' => '*'
+end
+
   get '/' do
-    note = Note.create( content: params[:message] )
+
   end
 
-  post '/' do
+  post '/notes' do
+    note = Note.create(content: params[:content])
+  end
 
+  get '/notes' do
+    Notes.all.to_json
+  end
+
+  get '/notes/:id' do
+    Note.get(params(:id)).to_json
   end
 
   # start the server if ruby file executed directly
