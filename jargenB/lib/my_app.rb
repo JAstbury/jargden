@@ -18,7 +18,7 @@ end
   end
 
   get '/notes' do
-    Notes.all.to_json
+    Note.all.to_json
   end
 
   get '/notes/:id' do

@@ -16,9 +16,9 @@ function showNote(id){
   document.getElementById("currentMessage").innerHTML = getById(id);
 }
 
-var notesArray = getItem("notes");
+var notesArray = get();
 
-if(getItem("notes") !== null) {
-  var notesArray = getItem("notes");
+if(get() !== null) {
+  var notesArray = get();
   document.getElementById("messages").innerHTML = viewNotes(notesArray);
 }
