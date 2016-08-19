@@ -1,13 +1,13 @@
 var notes = new NoteList();
 
 function createMessageClick(){
-  var message = new Note(document.forms.Form.message.value);
-  notes.add(message);
-  renderNote();
+  var message = document.forms.Form.message.value;
+  save(message);
+  //renderNote();
 }
 
-function renderNote() {
-  var notesArray = getItem("notes");
-  var messageList = document.getElementById("messages").innerHTML;
-  document.getElementById("messages").innerHTML = viewNote(messageList, notesArray);
-}
+// function renderNote() {
+//   var notesArray = getItem("notes");
+//   var messageList = document.getElementById("messages").innerHTML;
+//   document.getElementById("messages").innerHTML = viewNote(messageList, notesArray);
+// }
